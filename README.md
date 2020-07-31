@@ -2,10 +2,13 @@
 
 Verify minikube is running:
 ```
-$ minikube status
-minikube: Running
-cluster: Running
-kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.100
+minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
 ```
 
 
