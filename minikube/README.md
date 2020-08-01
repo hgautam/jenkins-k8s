@@ -16,9 +16,10 @@ Create namespace:
 ```
 $ kubectl create -f minikube/jenkins-namespace.yaml
 ```
-# Modify values file to use the persistent volume
+
 Create persistent volume (folder /data is persistent on minikube)
 ```
+# Modify values file to use the persistent volume
 $ kubectl create -f minikube/jenkins-volume.yaml
 ```
 
