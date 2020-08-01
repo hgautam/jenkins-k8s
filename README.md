@@ -1,4 +1,4 @@
-# minikube-helm-jenkins
+# Jenkins on K8s
 
 Verify minikube is running:
 ```
