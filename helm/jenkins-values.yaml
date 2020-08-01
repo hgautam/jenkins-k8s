@@ -1,3 +1,4 @@
+# old file. Use specifig values files. Like minikube-jenkins-values.yaml
 clusterZone: "cluster.local"
 
 master:
