@@ -10,6 +10,7 @@ master:
   - workflow-durable-task-step:latest
   - blueocean:latest
   - credentials:latest
+  - docker:latest
   - ec2:latest
   - git:latest
   - git-client:latest
