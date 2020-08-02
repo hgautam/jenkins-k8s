@@ -34,10 +34,10 @@ master:
     labels: {}
     annotations:
       kubernetes.io/ingress.class: "nginx"
-      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
       nginx.ingress.kubernetes.io/proxy-body-size: 50m
       nginx.ingress.kubernetes.io/proxy-request-buffering: "off"
-      ingress.kubernetes.io/ssl-redirect: "false"
+      ingress.kubernetes.io/ssl-redirect: "true"
       ingress.kubernetes.io/proxy-body-size: 50m
       ingress.kubernetes.io/proxy-request-buffering: "off"
     hostName: 192.168.64.41.nip.io
