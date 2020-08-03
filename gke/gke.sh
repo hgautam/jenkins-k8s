@@ -1,26 +1,20 @@
+#! /bin/bash
+
 ######################
 # Create The Cluster #
 ######################
-
+# Assumption:  connectivity is already configured
 #gcloud auth login
 
-ZONE=$(gcloud compute zones list \
-    --filter "region:(us-east1)" \
-    | awk '{print $1}' \
-    | tail -n 1)
+CLUSTER_NAME=Jenkins
 
-ZONES=$(gcloud compute zones list \
-    --filter "region:(us-east1)" \
-    | tail -n +2 \
-    | awk '{print $1}' \
-    | tr '\n' ',')
+ZONE=us-west1-a
 
 MACHINE_TYPE=n1-highcpu-2
 
 gcloud container clusters \
-    create devops24 \
+    create $CLUSTER_NAME \
     --zone $ZONE \
-    --node-locations $ZONES \
     --machine-type $MACHINE_TYPE \
     --enable-autoscaling \
     --num-nodes 1 \
