@@ -25,4 +25,5 @@ pyenv
 Vagrantfile
 *.key
 *.crt
+*.log
 
