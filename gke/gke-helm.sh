@@ -43,12 +43,17 @@ kubectl apply \
 # Install Tiller #
 ##################
 
-kubectl create \
-    -f https://raw.githubusercontent.com/vfarcic/k8s-specs/master/helm/tiller-rbac.yml \
-    --record --save-config
+#kubectl create \
+#    -f https://raw.githubusercontent.com/vfarcic/k8s-specs/master/helm/tiller-rbac.yml \
+#    --record --save-config
 
-helm init --service-account tiller
+#helm init --service-account tiller
 
-kubectl -n kube-system \
-    rollout status deploy tiller-deploy
-
+#kubectl -n kube-system \
+#    rollout status deploy tiller-deploy
+echo "Retrieving LB IP....."
+sleep 60
+# Retrieve ingress ip
+LB_IP=$(kubectl -n ingress-nginx\
+    get svc ingress-nginx-controller \
+    -o jsonpath="{.status.loadBalancer.ingress[0].ip}"); echo $LB_IP
