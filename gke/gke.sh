@@ -6,7 +6,7 @@
 # Assumption:  connectivity is already configured
 #gcloud auth login
 
-CLUSTER_NAME=Jenkins
+CLUSTER_NAME=jenkins
 
 ZONE=us-west1-a
 
