@@ -10,7 +10,11 @@ kubelet: Running
 apiserver: Running
 kubeconfig: Configured
 ```
+Enable ingress
 
+```
+minikube addons enable ingress
+```
 
 Create namespace:
 ```
