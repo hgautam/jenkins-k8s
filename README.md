@@ -1,3 +1,3 @@
 # Jenkins on K8s
 
-## Examples GKE, Minikube and AWS
+## Examples GKE, Minikube
