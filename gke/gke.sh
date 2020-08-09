@@ -40,4 +40,4 @@ LB_IP=$(kubectl -n ingress-nginx\
     -o jsonpath="{.status.loadBalancer.ingress[0].ip}"); echo $LB_IP
 
 # create jenkins namespace
-kubctl create namespace jenkins
+kubectl create namespace jenkins
