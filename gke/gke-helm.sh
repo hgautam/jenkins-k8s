@@ -5,7 +5,7 @@
 
 # Assumption: Connectivity is all set
 #gcloud auth login
-
+# Uses helm 3
 CLUSTER_NAME=jenkins
 
 ZONE=us-west1-a
@@ -30,27 +30,9 @@ kubectl create clusterrolebinding \
 # Install Ingress #
 ###################
 
-# kubectl apply \
-#    -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/1cd17cd12c98563407ad03812aebac46ca4442f2/deploy/mandatory.yaml
-
-#kubectl apply \
-#    -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/1cd17cd12c98563407ad03812aebac46ca4442f2/deploy/provider/cloud-generic.yaml
-
-# Latest version of nginx controller
 kubectl apply \
     -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/cloud/deploy.yaml
-##################
-# Install Tiller #
-##################
 
-#kubectl create \
-#    -f https://raw.githubusercontent.com/vfarcic/k8s-specs/master/helm/tiller-rbac.yml \
-#    --record --save-config
-
-#helm init --service-account tiller
-
-#kubectl -n kube-system \
-#    rollout status deploy tiller-deploy
 echo "Retrieving LB IP....."
 sleep 60
 # Retrieve ingress ip

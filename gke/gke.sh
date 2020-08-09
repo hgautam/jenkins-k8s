@@ -26,12 +26,6 @@ kubectl create clusterrolebinding \
     --clusterrole cluster-admin \
     --user $(gcloud config get-value account)
 
-# create ingress
-#kubectl apply \
-#    -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/1cd17cd12c98563407ad03812aebac46ca4442f2/deploy/mandatory.yaml
-
-#kubectl apply \
-#    -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/1cd17cd12c98563407ad03812aebac46ca4442f2/deploy/provider/cloud-generic.yaml
 
 # Latest version of nginx controller
 kubectl apply \
