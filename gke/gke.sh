@@ -4,6 +4,7 @@
 # Create The Cluster #
 ######################
 # Assumption:  connectivity is already configured
+# helm 3 is being used for deploying Helm based Jenkins package
 #gcloud auth login
 
 CLUSTER_NAME=jenkins
@@ -27,6 +28,16 @@ kubectl create clusterrolebinding \
     --user $(gcloud config get-value account)
 
 
-# Latest version of nginx controller
+#Latest version of nginx controller
 kubectl apply \
     -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/cloud/deploy.yaml
+
+echo "Retrieving LB IP....."
+sleep 60
+# Retrieve ingress ip
+LB_IP=$(kubectl -n ingress-nginx\
+    get svc ingress-nginx-controller \
+    -o jsonpath="{.status.loadBalancer.ingress[0].ip}"); echo $LB_IP
+
+# create jenkins namespace
+kubctl create namespace jenkins
