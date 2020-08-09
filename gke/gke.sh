@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 ######################
 # Create The Cluster #
@@ -32,8 +32,14 @@ kubectl create clusterrolebinding \
 kubectl apply \
     -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/cloud/deploy.yaml
 
+# Wait to make sure that LB IP is ready
 echo "Retrieving LB IP....."
-sleep 60
+for pc in $(seq 1 60); do
+    echo -ne "."
+    sleep 1
+done
+echo
+
 # Retrieve ingress ip
 LB_IP=$(kubectl -n ingress-nginx\
     get svc ingress-nginx-controller \
