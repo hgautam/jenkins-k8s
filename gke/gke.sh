@@ -34,7 +34,7 @@ kubectl apply \
 
 # Wait to make sure that LB IP is ready
 echo "Retrieving LB IP....."
-for pc in $(seq 1 60); do
+for i in $(seq 1 60); do
     echo -ne "."
     sleep 1
 done
