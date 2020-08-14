@@ -1,4 +1,4 @@
-# ~/helm3/darwin-amd64/helm install stable/jenkins --name jenkins --namespace jenkins --values helm/gke-tls-values.yaml
+# ~/helm3/darwin-amd64/helm install jenkins stable/jenkins --namespace jenkins --values helm/gke-tls-values.yaml
 master:
   tag: "lts-alpine"
   cpu: "500m"
@@ -40,13 +40,13 @@ master:
       ingress.kubernetes.io/ssl-redirect: "true"
       ingress.kubernetes.io/proxy-body-size: 50m
       ingress.kubernetes.io/proxy-request-buffering: "off"
-    hostName: 192.168.64.41.nip.io
+    hostName: example.com
     tls:
-      - secretName: 192-168-64-41-nip-io-tls
+      - secretName: example-com-tls
         hosts:
-          - 192.168.64.41.nip.io
+          - example.com
     rules:
-      - host: 192.168.64.41.nip.io
+      - host: jenkins.example.com
         http:
           paths:
           - path: /
