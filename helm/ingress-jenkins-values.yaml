@@ -1,4 +1,5 @@
 # ~/helm3/darwin-amd64/helm install jenkins stable/jenkins --namespace jenkins --values helm/gke-ingress-values.yaml
+# helm install jenkins stable/jenkins --namespace jenkins --values helm/gke-ingress-values.yaml
 master:
   tag: "lts-alpine"
   cpu: "500m"
