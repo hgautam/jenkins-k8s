@@ -46,3 +46,9 @@ Check admin password for jenkins:
 $ printf $(kubectl get secret --namespace jenkins-project jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
 ```
 
+Helm 2 list and delete a release
+
+```
+helm list
+helm delete <releaseName>
+```
