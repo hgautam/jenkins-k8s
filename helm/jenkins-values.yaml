@@ -1,4 +1,5 @@
-# helm install jenkins stable/jenkins --namespace jenkins --values helm/jenkins-values.yaml
+# installing with Helm 2.x
+# helm install stable/jenkins --namespace jenkins --name jenkins --values helm/jenkins-values.yaml
 master:
   tag: "lts-alpine"
   cpu: "500m"
@@ -36,6 +37,6 @@ master:
       ingress.kubernetes.io/ssl-redirect: "false"
       ingress.kubernetes.io/proxy-body-size: 50m
       ingress.kubernetes.io/proxy-request-buffering: "off"
-    hostName: 104.196.228.151.nip.io
+    hostName: 192.168.64.43.nip.io
 rbac:
   create: true

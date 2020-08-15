@@ -1,5 +1,6 @@
 # ~/helm3/darwin-amd64/helm install jenkins stable/jenkins --namespace jenkins --values helm/gke-ingress-values.yaml
-# helm install jenkins stable/jenkins --namespace jenkins --values helm/gke-ingress-values.yaml
+# helm 2 installation command is given below:
+# helm install jenkins stable/jenkins --namespace jenkins --name jenkins --values helm/gke-ingress-values.yaml
 master:
   tag: "lts-alpine"
   cpu: "500m"
@@ -44,6 +45,6 @@ master:
       ingress.kubernetes.io/ssl-redirect: "false"
       ingress.kubernetes.io/proxy-body-size: 50m
       ingress.kubernetes.io/proxy-request-buffering: "off"
-    hostName: 35.233.186.131.nip.io
+    hostName: 192.168.64.43.nip.io
 rbac:
   create: true
