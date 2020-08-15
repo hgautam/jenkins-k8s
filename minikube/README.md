@@ -15,10 +15,16 @@ Enable ingress
 ```
 minikube addons enable ingress
 ```
+Enable Helm/Tiller
+
+```
+minikube addons enable helm-tiller
+```
 
 Create namespace:
 ```
 $ kubectl create -f minikube/jenkins-namespace.yaml
+kubectl create namespace jenkins
 ```
 
 Create persistent volume (folder /data is persistent on minikube)
@@ -30,7 +36,8 @@ $ kubectl create -f minikube/jenkins-volume.yaml
 
 Execute helm:
 ```
-$ helm install --name jenkins -f helm/jenkins-values.yaml stable/jenkins --namespace jenkins
+Non-ingress Helm based install
+$ helm install jenkins stable/jenkins --namespace jenkins --values helm/jenkins-values.yaml
 ```
 
 
