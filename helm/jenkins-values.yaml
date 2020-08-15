@@ -1,4 +1,4 @@
-# helm install jenkins stable/jenkins --namespace jenkins --values helm/noingress-jenkins-values.yaml
+# helm install jenkins stable/jenkins --namespace jenkins --values helm/jenkins-values.yaml
 master:
   tag: "lts-alpine"
   cpu: "500m"
