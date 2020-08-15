@@ -12,6 +12,7 @@ master:
   - durable-task:latest
   - workflow-durable-task-step:latest
   - blueocean:latest
+  - configuration-as-code:latest
   - credentials:latest
   - ec2:latest
   - git:latest
