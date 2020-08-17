@@ -95,7 +95,7 @@ spec:
   rules:
   - http:
       paths:
-      - path:
+      - path: /jenkins
         backend:
           serviceName: jenkins
           servicePort: 8080
@@ -151,14 +151,14 @@ spec:
           mountPath: /var/jenkins_home
         livenessProbe:
           httpGet:
-            path: /
+            path: /jenkins/login
             port: 8080
           initialDelaySeconds: 60
           timeoutSeconds: 5
           failureThreshold: 12 # ~2 minutes
         readinessProbe:
           httpGet:
-            path: /
+            path: /jenkins/login
             port: 8080
           initialDelaySeconds: 60
           timeoutSeconds: 5
