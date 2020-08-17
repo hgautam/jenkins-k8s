@@ -151,14 +151,14 @@ spec:
           mountPath: /var/jenkins_home
         livenessProbe:
           httpGet:
-            path: /login
+            path: /
             port: 8080
           initialDelaySeconds: 60
           timeoutSeconds: 5
           failureThreshold: 12 # ~2 minutes
         readinessProbe:
           httpGet:
-            path: /login
+            path: /
             port: 8080
           initialDelaySeconds: 60
           timeoutSeconds: 5
