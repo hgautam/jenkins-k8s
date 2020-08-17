@@ -69,7 +69,7 @@ spec:
     app: jenkins
   ports:
   - name: http
-    port: 80
+    port: 8080
     targetPort: 8080
     protocol: TCP
   - name: agent
@@ -98,7 +98,7 @@ spec:
       - path:
         backend:
           serviceName: jenkins
-          servicePort: 80
+          servicePort: 8080
 
 ---
 
