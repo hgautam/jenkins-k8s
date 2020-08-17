@@ -158,7 +158,7 @@ spec:
           failureThreshold: 12 # ~2 minutes
         readinessProbe:
           httpGet:
-            path: /jenkins/login
+            path: /login
             port: 8080
           initialDelaySeconds: 60
           timeoutSeconds: 5
