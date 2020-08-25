@@ -18,8 +18,8 @@ gcloud container clusters \
     --zone $ZONE \
     --machine-type $MACHINE_TYPE \
     --enable-autoscaling \
-    --num-nodes 1 \
-    --max-nodes 1 \
+    --num-nodes 3 \
+    --max-nodes 3 \
     --min-nodes 1
 
 kubectl create clusterrolebinding \
