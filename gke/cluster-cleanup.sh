@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Set ZONE NAME
-zone_name=us-west1-a
+zone_name=us-west3-a
 # Set LOG_FILE
 LOG_FILE=gcloud.log
 
