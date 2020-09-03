@@ -43,6 +43,6 @@ master:
       ingress.kubernetes.io/ssl-redirect: "false"
       ingress.kubernetes.io/proxy-body-size: 50m
       ingress.kubernetes.io/proxy-request-buffering: "off"
-    hostName: 34.82.182.142.nip.io
+    hostName: 192.168.64.51.nip.io
 rbac:
   create: true
