@@ -15,7 +15,7 @@ Enable ingress
 ```
 minikube addons enable ingress
 ```
-Enable Helm/Tiller
+Enable Helm/Tiller(Not required anymore)
 
 ```
 minikube addons enable helm-tiller
@@ -33,11 +33,16 @@ Create persistent volume (folder /data is persistent on minikube)
 $ kubectl create -f minikube/jenkins-volume.yaml
 ```
 
+Add Jenkins Helm Repo
+```
+helm repo add jenkins https://charts.jenkins.io
+helm repo update
+```
 
 Execute helm:
 ```
 Non-ingress Helm based install
-$ helm install jenkins stable/jenkins --namespace jenkins --values helm/jenkins-values.yaml
+$ helm install jenkins jenkins/jenkins --namespace jenkins --values helm/jenkins-values.yaml
 ```
 
 
