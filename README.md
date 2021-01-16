@@ -1,3 +1,4 @@
-# Jenkins on K8s
+### Build and Deploy on K8s
 
-## Examples GKE, Minikube
+* Installing Jenkins in K8s
+* Deploying from Jenkins to K8s
