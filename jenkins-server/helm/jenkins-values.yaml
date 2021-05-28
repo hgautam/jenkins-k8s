@@ -1,6 +1,5 @@
-# installing with Helm 2.x
-# helm install stable/jenkins --namespace jenkins --name jenkins --values helm/jenkins-values.yaml
-master:
+# helm install jenkins jenkins/jenkins --namespace jenkins --values helm/jenkins-values.yaml
+controller:
   tag: "lts-alpine"
   cpu: "500m"
   memory: "500Mi"
