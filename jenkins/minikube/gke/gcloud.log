@@ -1,0 +1,13 @@
+ Running gcloud container clusters list command
+deleting cluster: jenkins
+Running list compute disks command
+Deleting Compute Disk: gke-jenkins-7e6ff0a2-d-pvc-67f74aa4-0f15-4174-ab21-002dab60ac8e
+Deleting Compute Disk: gke-jenkins-default-pool-7e120d36-gm9k
+Deleting Compute Disk: gke-jenkins-default-pool-7e120d36-r9g4
+Deleting Compute Disk: gke-jenkins-default-pool-7e120d36-tgrd
+ Running gcloud container clusters list command
+deleting cluster: jenkins
+Running list compute disks command
+Deleting Compute Disk: gke-jenkins-7e6ff0a2-d-pvc-67f74aa4-0f15-4174-ab21-002dab60ac8e
+ Running gcloud container clusters list command
+Running list compute disks command
