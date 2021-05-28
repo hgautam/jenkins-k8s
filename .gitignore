@@ -1,1 +1,5 @@
-jenkins/**/**
+jenkins/minikube/*.crt
+jenkins/minikube/*.key
+jenkins/minikube/gke/*.log
+jenkins/minikube/gke/*.key
+jenkins/minikube/gke/*.crt
