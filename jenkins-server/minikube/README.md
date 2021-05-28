@@ -47,8 +47,11 @@ $ helm install jenkins jenkins/jenkins --namespace jenkins --values helm/jenkins
 
 
 Check admin password for jenkins:
-```
-$ printf $(kubectl get secret --namespace jenkins-project jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
+```bash
+# Get your 'admin' user password by running:
+kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/chart-admin-password && echo
+
+# Visit http://192.168.64.43.nip.io
 ```
 
 Helm 2 list and delete a release
