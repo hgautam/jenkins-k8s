@@ -1,4 +1,4 @@
-# Jenkins on Minikube
+## Jenkins on Minikube
 
 ### This example is without Ingress. Directly pointing to the NodePort for accessing Jenkins
 
@@ -17,13 +17,6 @@ Create namespace:
 ```
 $ kubectl create -f minikube/jenkins-namespace.yaml
 kubectl create namespace jenkins
-```
-
-### This part will be ported inside the helm file
-Create persistent volume (folder /data is persistent on minikube)
-```
-# Modify values file to use the persistent volume
-$ kubectl create -f minikube/jenkins-volume.yaml
 ```
 
 Add Jenkins Helm Repo
@@ -47,7 +40,7 @@ kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/sec
 # Visit http://192.168.64.43.nip.io
 ```
 
-Helm 2 list and delete a release
+Helm list and install a release
 
 ```
 helm list -n jenkins
