@@ -1,5 +1,7 @@
 # Jenkins on Minikube
 
+### This example is without Ingress. Directly pointing to the NodePort for accessing Jenkins
+
 Verify minikube is running:
 ```
 minikube status
@@ -10,16 +12,6 @@ kubelet: Running
 apiserver: Running
 kubeconfig: Configured
 ```
-Enable ingress
-
-```
-minikube addons enable ingress
-```
-Enable Helm/Tiller(Not required anymore)
-
-```
-minikube addons enable helm-tiller
-```
 
 Create namespace:
 ```
@@ -27,6 +19,7 @@ $ kubectl create -f minikube/jenkins-namespace.yaml
 kubectl create namespace jenkins
 ```
 
+### This part will be ported inside the helm file
 Create persistent volume (folder /data is persistent on minikube)
 ```
 # Modify values file to use the persistent volume
@@ -57,6 +50,6 @@ kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/sec
 Helm 2 list and delete a release
 
 ```
-helm list
-helm delete <releaseName>
+helm list -n jenkins
+helm uninstall jenkins -n jenkins
 ```
