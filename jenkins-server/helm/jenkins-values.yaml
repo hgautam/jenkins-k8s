@@ -1,4 +1,5 @@
 # helm install jenkins jenkins/jenkins --namespace jenkins --values helm/jenkins-values.yaml
+# example without enabling ingress in the cluster
 controller:
   tag: "lts-alpine"
   cpu: "500m"
