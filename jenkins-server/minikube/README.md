@@ -28,7 +28,7 @@ helm repo update
 Execute helm:
 ```
 Non-ingress Helm based install
-$ helm install jenkins jenkins/jenkins --namespace jenkins --values helm/jenkins-values.yaml
+$ helm install jenkins jenkins/jenkins --namespace jenkins --values helm/values.yaml
 ```
 
 
