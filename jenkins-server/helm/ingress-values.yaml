@@ -380,10 +380,10 @@ controller:
   ingress:
     enabled: true
     # Override for the default paths that map requests to the backend
-    paths: 
-      - backend:
-          serviceName: jenkins
-          servicePort: 8080
+    paths: []
+    #  - backend:
+    #      serviceName: jenkins
+    #      servicePort: 8080
     # - backend:
     #     serviceName: >-
     #       {{ template "jenkins.fullname" . }}
@@ -399,7 +399,7 @@ controller:
     # Set this path to jenkinsUriPrefix above or use annotations to rewrite path
     # path: "/jenkins"
     # configures the hostname e.g. jenkins.example.com
-    hostName: 192.168.64.128.nip.io
+    hostName: 192.168.64.129.nip.io
     tls:
     # - secretName: jenkins.cluster.local
     #   hosts:
