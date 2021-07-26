@@ -9,7 +9,7 @@
 
 CLUSTER_NAME=jenkins
 
-ZONE=us-west3-a
+ZONE=us-west4-a
 
 MACHINE_TYPE=n1-highcpu-2
 
