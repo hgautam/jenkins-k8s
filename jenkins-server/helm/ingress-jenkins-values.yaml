@@ -1,32 +1,29 @@
 # helm 3 is being used for vendor cloud
-# ~/helm3/darwin-amd64/helm install jenkins stable/jenkins --namespace jenkins --values helm/ingress-jenkins-values.yaml
-# helm 2 installation command is given below:
-# helm install stable/jenkins --namespace jenkins --name jenkins --values helm/ingress-jenkins-values.yaml
-master:
+# helm install jenkins jenkins/jenkins --namespace jenkins --values helm/ingress-jenkins-values.yaml
+
+controller::
+  componentName: "jenkins-controller"
+  image: "jenkins/jenkins"
   tag: "lts-alpine"
+  imagePullPolicy: "Always"
   serviceType: ClusterIP
   installPlugins:
-  - durable-task:latest
   - workflow-durable-task-step:latest
   - blueocean:latest
   - configuration-as-code:latest
   - credentials:latest
-  - ec2:latest
   - git:latest
   - git-client:latest
   - github:latest
   - kubernetes:latest
   - pipeline-utility-steps:latest
   - pipeline-model-definition:latest
-  - slack:latest
-  - thinBackup:latest
   - workflow-aggregator:latest
   - ssh-slaves:latest
   - ssh-agent:latest
   - jdk-tool:latest
   - command-launcher:latest
   - github-oauth:latest
-  - google-compute-engine:latest
   ingress:
     enabled: true
     paths:
