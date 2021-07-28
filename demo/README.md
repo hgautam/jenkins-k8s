@@ -16,6 +16,7 @@ Infrastructure created as part of this demo will have a small cost if you don't 
 # update the IP address
 
 # Run Helm install
+helm install jenkins jenkins/jenkins --namespace jenkins --values values.yaml
 
 # Verify
 ```
