@@ -7,7 +7,7 @@ Infrastructure created as part of this demo will have a small cost if you don't 
     - kubectl
     - helm 3.0
     - GCP active account
-    - gcloud tool [gcloud](https://cloud.google.com/sdk/gcloud)
+    - gcloud configured to talk to your GCP project [gcloud](https://cloud.google.com/sdk/gcloud)
 
 ```bash
 # create a cluster
@@ -19,4 +19,7 @@ Infrastructure created as part of this demo will have a small cost if you don't 
 helm install jenkins jenkins/jenkins --namespace jenkins --values values.yaml
 
 # Verify
+
+# clean up
+./cluster-cleanup.sh
 ```
