@@ -9,18 +9,12 @@
 
 CLUSTER_NAME=jenkins
 
-ZONE=us-west4-a
-
-MACHINE_TYPE=n1-highcpu-2
+REGION=us-central1
 
 gcloud container clusters \
-    create $CLUSTER_NAME \
-    --zone $ZONE \
-    --machine-type $MACHINE_TYPE \
-    --enable-autoscaling \
-    --num-nodes 3 \
-    --max-nodes 3 \
-    --min-nodes 1
+    create-auto $CLUSTER_NAME \
+    --region $ZONE
+
 
 kubectl create clusterrolebinding \
     cluster-admin-binding \
@@ -29,7 +23,6 @@ kubectl create clusterrolebinding \
 
 
 #Latest version of nginx controller
-# https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/cloud/deploy.yaml
 kubectl apply \
     -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.48.1/deploy/static/provider/cloud/deploy.yaml
 
