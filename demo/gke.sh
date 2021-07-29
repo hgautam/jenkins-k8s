@@ -13,7 +13,7 @@ REGION=us-central1
 
 gcloud container clusters \
     create-auto $CLUSTER_NAME \
-    --region $ZONE
+    --region $REGION
 
 
 kubectl create clusterrolebinding \
