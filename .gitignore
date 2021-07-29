@@ -4,3 +4,4 @@ jenkins/minikube/gke/*.log
 jenkins/minikube/gke/*.key
 jenkins/minikube/gke/*.crt
 jenkins-server/gke/*.log
+demo/*.log
