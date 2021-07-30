@@ -9,12 +9,14 @@
 
 CLUSTER_NAME=jenkins
 
-REGION=us-central1
+ZONE=us-west4-a
+
+MACHINE_TYPE=n1-highcpu-2
 
 gcloud container clusters \
-    create-auto $CLUSTER_NAME \
-    --region $REGION
-
+    create $CLUSTER_NAME \
+    --zone $ZONE \
+    --machine-type $MACHINE_TYPE 
 
 kubectl create clusterrolebinding \
     cluster-admin-binding \
