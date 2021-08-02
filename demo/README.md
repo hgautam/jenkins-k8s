@@ -19,7 +19,7 @@ Infrastructure created as part of this demo will have a small cost if you don't 
 helm install jenkins jenkins/jenkins --namespace jenkins --values values.yaml
 
 # Verify
-
+http://{ingress-ip-produced-by-above-command}
 # clean up
 ./cluster-cleanup.sh
 ```
