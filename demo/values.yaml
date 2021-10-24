@@ -20,7 +20,7 @@ controller:
   # Used for label app.kubernetes.io/component
   componentName: "jenkins-controller"
   image: "jenkins/jenkins"
-  tag: "lts-alpine"
+  tag: "alpine"
   imagePullPolicy: "Always"
   imagePullSecretName:
   # Optionally configure lifetime for controller-container
@@ -208,10 +208,10 @@ controller:
 
   # List of plugins to be install during Jenkins controller start
   installPlugins:
-    - kubernetes:1.29.4
-    - workflow-aggregator:2.6
-    - git:4.7.1
-    - configuration-as-code:1.51
+    - kubernetes
+    - workflow-aggregator
+    - git
+    - configuration-as-code
 
   # Set to false to download the minimum required version of all dependencies.
   installLatestPlugins: true
@@ -398,7 +398,7 @@ controller:
     # Set this path to jenkinsUriPrefix above or use annotations to rewrite path
     # path: "/jenkins"
     # configures the hostname e.g. jenkins.example.com
-    hostName: 34.125.153.191.nip.io
+    hostName: 192.168.64.167.nip.io
     tls:
     # - secretName: jenkins.cluster.local
     #   hosts:
