@@ -97,7 +97,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            Name: jenkins
+            name: jenkins
             port:
               number: 8080
 
